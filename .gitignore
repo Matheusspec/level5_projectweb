@@ -20,14 +20,7 @@ node_modules
 # Ignore all local history of files
 .history
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
+
 *.jsp
 *.php
 *.rss

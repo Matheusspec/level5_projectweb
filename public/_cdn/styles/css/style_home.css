@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.default-head .title {
+  font-size: 45px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+  padding: 30px 0 0;
+  margin: 0;
+}
+.default-head .subtitle {
+  color: #999;
+  font-family: "Rubik", arial, sans-serif;
+  font-weight: 500;
+}
+
+.mbtn {
+  border-radius: 25px;
+  border: none;
+  animation: spin .9s linear infinite;
+  height: 45px;
+  width: 130px;
+}
+
+@keyframes spin {
+  to {
+    background: #005eca;
+  }
+}
+/*header*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #343a40f1;
+  height: 80px;
+}
+.header .brand {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+  left: 3%;
+}
+
+.nav-links {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.nav-links li {
+  margin: 0 30px;
+  position: relative;
+}
+.nav-links li .navlink, .nav-links li .active::before {
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.nav-links li .navlink::before, .nav-links li .active::before {
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background: #0077ff;
+  bottom: -5px;
+  left: 0;
+  transition: all .3s linear;
+}
+.nav-links li .active {
+  font-size: 25px;
+}
+.nav-links li .active::before {
+  width: 100%;
+}
+.nav-links li:hover .navlink::before, .nav-links li:hover .active::before {
+  width: 100%;
+}
+
+/*home*/
+#home {
+  background-image: url("../../images/bg.jpg");
+  background-color: #343a40;
+  background-position: center;
+  background-size: cover;
+  height: calc( 100vh);
+  text-align: center;
+}
+#home .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+#home .texti {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+#home .texti h1 {
+  font-size: 50px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+#home .texti p {
+  text-align: center;
+  padding: 0 190px;
+  font-size: 17px;
+}
+
+/*desc*/
+#desc {
+  background-color: #d6d6d6;
+}
+#desc .desc-content {
+  border-radius: 10px;
+}
+#desc .desc-content p {
+  font-size: 16px;
+  font-family: "Rubik", arial, sans-serif;
+  margin: 0 100px;
+}
+#desc .desc-content .mbtn {
+  margin: 20px 0;
+}
+
+/*services*/
+#services {
+  background: #343a40;
+}
+#services .mcard {
+  background-color: #343a40;
+  border-left: 2px solid #fff;
+}
+#services .mcard h1 {
+  font-size: 40px;
+  font-family: "Lora", "Times New Roman", serif;
+  transition: 0.4s ease;
+}
+#services .mcard p {
+  color: #adadad;
+  font-size: 15px;
+  font-family: "Rubik", arial, sans-serif;
+  transition: 0.4s ease;
+}
+#services .mcard i {
+  font-size: 60px;
+  transition: 0.4s ease;
+}
+#services .mcard:last-child {
+  border-right: 2px solid #fff;
+}
+#services .mcardg:hover i, #services .mcardg:hover h1 {
+  color: #e71d1d;
+}
+#services .mcards:hover i, #services .mcards:hover h1 {
+  color: #f52092;
+}
+#services .mcardm:hover i, #services .mcardm:hover h1 {
+  color: #52cfee;
+}
+#services .mcard:hover i {
+  transform: translateY(-10px);
+}
+#services .mcard:hover p {
+  color: #fff;
+}
+
+/*products*/
+#products {
+  background-color: #d6d6d6;
+}
+#products .product-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#products .product-desc h1 {
+  font-size: 30px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+#products .product-desc p {
+  line-height: 25px;
+  font-size: 15px;
+  font-family: "Rubik", arial, sans-serif;
+}
+
+#happyclients {
+  overflow: hidden;
+  height: 420px;
+  background-image: url("../../images/cytonn-photography-n95VMLxqM2I-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#happyclients .carousel-guides {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  transition: all .8s;
+}
+#happyclients .cont {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+#happyclients #mcarousel {
+  height: 330px;
+}
+#happyclients #mcarousel h1 {
+  font-size: 40px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+#happyclients #mcarousel .indi {
+  top: 320px;
+}
+#happyclients #mcarousel .indi .active {
+  background: #fff;
+  opacity: 1;
+}
+#happyclients .carousel-item.active {
+  transition: transform .9s linear;
+}
+#happyclients .carousel-content {
+  padding: 0 200px;
+  text-align: center;
+  word-wrap: break-word;
+}
+#happyclients .carousel-content i {
+  font-size: 32px;
+}
+#happyclients .carousel-content p {
+  font-size: 15px;
+  font-family: "Rubik", arial, sans-serif;
+}
+#happyclients .carousel-content .client {
+  font-size: 15px;
+  font-family: "Rubik", arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style_home.css.map */
