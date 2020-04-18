@@ -1,0 +1,246 @@
+@import './var';
+@import './reset';
+@import './global';
+
+/*header*/
+
+.header{
+    @include flexdiplay(center,row);
+    background-color: #343a40f1;
+    height: 80px;
+
+    .brand {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        position: absolute;
+        left: 3%;
+    }
+}
+.nav {
+    &-links{
+        list-style: none;
+        width: 100%;
+        @include flexdiplay(center,row);
+
+        li {
+            margin: 0 30px;
+            position: relative;
+            .navlink{
+                @include fontT(20px,$fontMenu);
+                color: #fff;
+                text-decoration: none;    
+                font-weight: 500;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 0;
+                    height: 5px;
+                    position: absolute;
+                    background: $primarycolor;
+                    bottom: -5px;
+                    left: 0;
+                    transition: all .3s linear;
+                }
+            }
+            .active {
+                font-size: 25px;
+
+                &::before{
+                    @extend .navlink;
+                    width: 100%;
+                }
+            }
+
+            &:hover .navlink::before {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+/*home*/
+
+#home {
+    background-image: url('../../images/bg.jpg');
+    background-color: #343a40;       
+    background-position: center;
+    background-size: cover;
+    height: calc( 100vh);
+    text-align: center;
+    
+    .back {
+        @include flexdiplay(center,column);
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+  
+    .texti{
+        @include flexdiplay(flex-start,column);
+        color: #fff;
+        h1{
+            @include fontT(50px,$fontlora);
+        }
+        p{
+            text-align: center;
+            padding: 0 190px;
+            font-size: 17px;;
+        }
+    }
+}
+
+/*desc*/
+
+#desc {
+     background-color: $backcolor;
+    .desc-content{
+        border-radius: 10px;
+        
+        p{
+            @include fontN(16px,$fontRub);
+            margin: 0 100px;
+
+        }
+
+        .mbtn{
+            margin: 20px 0;
+        }
+    }
+}
+
+/*services*/
+
+#services {
+    background: $backcolor3;
+
+    .mcard{
+
+        background-color: $backcolor3; 
+        border-left: 2px solid #fff;
+
+        h1{
+            @include fontN(40px, $fontlora);
+            transition: $transition;
+        }
+
+        p{
+            color: rgb(173, 173, 173);
+            @include fontN(15px);
+            transition: $transition;
+        }
+        
+        i{
+            font-size: 60px;
+            transition: $transition;
+        }
+
+        &:last-child{
+            border-right: 2px solid #fff;
+        }
+    }
+
+    .mcardg:hover i , .mcardg:hover h1 {
+        color: #e71d1d;
+    }
+
+    .mcards:hover i , .mcards:hover h1 {
+        color: #f52092;
+    }
+
+    .mcardm:hover i , .mcardm:hover h1 {
+        color: #52cfee;
+    }
+
+    .mcard:hover i {
+        transform: translateY(-10px);
+    }
+
+    .mcard:hover p {
+        color: #fff;
+    }
+}
+
+/*products*/
+
+#products{
+    background-color: $backcolor;
+    .product-desc{
+        @include flexdiplay(center,column);
+        h1{
+             @include fontT(30px, $fontlora);  
+        }
+        p{
+            line-height: 25px;
+            @include fontN;
+        }
+    }
+}
+
+#happyclients{
+    overflow: hidden;
+    height: 420px ;
+    background-image: url('../../images/cytonn-photography-n95VMLxqM2I-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    .carousel-guides {
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        background: transparent;
+        border: 2px solid #fff;
+        transition: all .8s;
+    }
+    
+    .cont{
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.801);
+    }
+    #mcarousel{
+        height: 330px;
+        
+        h1 {
+            @include fontT(40px, $fontlora);
+        }
+
+        .indi {
+            top: 320px;
+            .active{
+                background: #fff;
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-item.active {
+        transition: transform .9s linear;
+    }
+        
+    .carousel-content{
+        padding: 0 200px;
+        text-align: center;
+        word-wrap: break-word;
+
+        i {
+            font-size: 32px;
+        }
+
+        p{
+            @include fontN(15px, $fontRub);
+
+        }
+
+        .client{
+            @include fontT(15px,$fontRub);
+            font-weight: 400;
+        }
+
+
+    }
+}
+
+
+
+
+
+

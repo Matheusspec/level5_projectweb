@@ -1,0 +1,27 @@
+.default-head{
+    .title{
+        @include fontT(45px,$fontlora);
+        padding: 30px 0 0;
+        margin: 0;
+    }
+
+    .subtitle{
+        color: #999;
+        font:{
+            family: $fontRub;
+            weight: 500;
+        }
+    }
+}
+
+.mbtn {
+    @include btnp;
+    border: none;
+    animation: spin .9s linear infinite;
+    height: 45px;
+    width: 130px;
+}
+
+@keyframes spin {
+    to { background: rgb(0, 94, 202); }
+}

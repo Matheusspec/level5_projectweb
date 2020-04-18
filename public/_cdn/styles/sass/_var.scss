@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&display=swap');
+
+$fontlora: 'Lora', 'Times New Roman', serif;
+$fontRub: 'Rubik', arial, sans-serif;
+$fontMenu: 'Roboto Slab', serif;
+
+$titletam: 50px;
+$texttam: 14px;
+
+$transition: .4s ease ;
+
+$primarycolor: rgb(0, 119, 255);
+$backcolor: rgb(214, 214, 214);
+$backcolor2: #092744;
+$backcolor3: #343a40;
+
+
+@mixin btnp {
+    border-radius: 25px;
+}
+
+@mixin flexdiplay($position,$direction) {
+    display: flex;
+    justify-content: $position;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin border($tipo) { 
+    $tipo: 1px solid blue ;
+}
+
+@mixin fontT($tam,$tipo){
+    font-size: $tam;
+    font-family: $tipo;
+    text-transform: uppercase;
+}
+
+@mixin fontN($tam: 15px, $tipo:$fontRub) {
+    font-size: $tam;
+    font-family: $tipo;
+}
