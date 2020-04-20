@@ -1,3 +1,8 @@
+html,body{
+    scroll-behavior: smooth;
+
+}
+
 .default-head{
     .title{
         @include fontT(45px,$fontlora);
@@ -14,12 +19,27 @@
     }
 }
 
+.defaulticon {
+    margin-right: 5px;
+    font-size: 19px;
+    cursor: pointer;
+    background-color: #fff ;
+    color: $backcolor3;
+    line-height: 33px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .4s linear;
+}
+
 .mbtn {
     @include btnp;
     border: none;
     animation: spin .9s linear infinite;
     height: 45px;
     width: 130px;
+    color: #fff;
 }
 
 @keyframes spin {

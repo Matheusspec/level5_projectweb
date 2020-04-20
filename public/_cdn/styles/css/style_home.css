@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 .default-head .title {
   font-size: 45px;
   font-family: "Lora", "Times New Roman", serif;
@@ -20,12 +24,27 @@
   font-weight: 500;
 }
 
+.defaulticon {
+  margin-right: 5px;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #343a40;
+  line-height: 33px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all .4s linear;
+}
+
 .mbtn {
   border-radius: 25px;
   border: none;
   animation: spin .9s linear infinite;
   height: 45px;
   width: 130px;
+  color: #fff;
 }
 
 @keyframes spin {
@@ -39,13 +58,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #343a40f1;
+  background-color: #343a40cb;
   height: 80px;
 }
 .header .brand {
-  width: 40px;
-  height: 40px;
-  background-color: red;
+  max-width: 85px;
+  max-height: 85px;
   position: absolute;
   left: 3%;
 }
@@ -205,6 +223,7 @@
   font-family: "Rubik", arial, sans-serif;
 }
 
+/*Happy clients*/
 #happyclients {
   overflow: hidden;
   height: 420px;
@@ -225,7 +244,7 @@
   background-color: rgba(0, 0, 0, 0.801);
 }
 #happyclients #mcarousel {
-  height: 330px;
+  height: 430px;
 }
 #happyclients #mcarousel h1 {
   font-size: 40px;
@@ -259,6 +278,253 @@
   font-family: "Rubik", arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+/* where are we*/
+#where #map {
+  height: 420px;
+  overflow: hidden;
+  max-height: 420px;
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#where .colmap {
+  padding: 0;
+}
+#where .mapaside {
+  overflow: hidden;
+  background-color: #343a40;
+  box-sizing: border-box;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#where .mapaside .map-text {
+  font-size: 14px;
+  margin-left: 11px;
+  line-height: 45px;
+  width: 400px;
+  max-width: 400px;
+}
+#where .mapaside .map-text p {
+  display: inline-block;
+}
+#where .mapaside .map-text i {
+  line-height: 33px;
+}
+#where .mapaside .map-text:hover i {
+  background: #0077ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+#footer {
+  background-color: #000;
+  position: relative;
+}
+#footer .toup {
+  position: absolute;
+  top: -20px;
+  right: 35px;
+  background-color: #0077ff;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all .4s;
+}
+#footer .toup:hover {
+  transform: translatey(-10px);
+  color: #000;
+}
+#footer .firstrow, #footer .sdrow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#footer .firstrow .mediaicon, #footer .sdrow .mediaicon {
+  height: 100px;
+  padding-top: 20px;
+  justify-content: space-around;
+}
+#footer .firstrow .mediaicon h1, #footer .sdrow .mediaicon h1 {
+  font-size: 20px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+#footer .firstrow .mediaicon .face, #footer .sdrow .mediaicon .face {
+  color: #fff;
+  background-color: #336296;
+}
+#footer .firstrow .mediaicon .link, #footer .sdrow .mediaicon .link {
+  color: #fff;
+  background-color: #127CB6;
+}
+#footer .firstrow .mediaicon .you, #footer .sdrow .mediaicon .you {
+  color: #fff;
+  background-color: #E64236;
+}
+#footer .firstrow .mediaicon .inst, #footer .sdrow .mediaicon .inst {
+  color: #fff;
+  background-color: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+#footer .firstrow .mediaicon i, #footer .sdrow .mediaicon i {
+  line-height: 33px;
+}
+#footer .firstrow .mediaicon i:hover, #footer .sdrow .mediaicon i:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+#footer .firstrow .form, #footer .sdrow .form {
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#footer .firstrow .form input, #footer .sdrow .form input {
+  border: none;
+  border-bottom: 3px solid #fff;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  width: 250px;
+  max-width: 250px;
+  margin-bottom: 20px;
+  transition: .8s;
+}
+#footer .firstrow .form input:focus, #footer .sdrow .form input:focus {
+  border-bottom: 3px solid #0077ff;
+}
+#footer .firstrow .form button, #footer .sdrow .form button {
+  background: #0077ff;
+}
+#footer .firstrow .form h1, #footer .sdrow .form h1 {
+  font-size: 20px;
+  font-family: "Lora", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+#footer .sdrow a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Rubik", arial, sans-serif;
+}
+
+@media (max-width: 1200px) {
+  #where .mapaside .map-text {
+    margin-left: 65px;
+  }
+  #where .mapaside .map-text p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 992px) {
+  #services h1 {
+    font-size: 28px;
+  }
+  #services P {
+    font-size: 13px;
+  }
+
+  #happyclients #happyclients .carousel-content {
+    padding: 0 100px;
+  }
+  #happyclients #mcarousel .indi {
+    top: 370px;
+  }
+
+  #where #map {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  #where .mapaside {
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media (max-width: 770px) {
+  #home .texti p {
+    padding: 0 100px;
+  }
+
+  #desc .desc-content p {
+    padding: 0;
+  }
+
+  #services .mcard h1 {
+    font-size: 28px;
+  }
+  #services .mcard p {
+    font-size: 13px;
+  }
+
+  #happyclients .carousel-content {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 767px) {
+  #home .texti h1 {
+    font-size: 37px;
+  }
+  #home .texti p {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .default-head .title {
+    font-size: 33px;
+  }
+
+  #desc .desc-content p {
+    font-size: 12px;
+    margin: 0 10px;
+  }
+
+  #services .mcard, #services .mcard:last-child {
+    border: none;
+  }
+
+  #happyclients #mcarousel h1 {
+    font-size: 33px;
+  }
+  #happyclients .carousel-content {
+    padding: 0 10px;
+  }
+  #happyclients .carousel-content p {
+    font-size: 12px;
+  }
+
+  #where #map {
+    border-radius: 0;
+  }
+  #where .mapaside {
+    border-radius: 0;
+  }
+
+  #footer .firstrow .mediaicon, #footer .sdrow .mediaicon {
+    margin: 30px 0;
+  }
+  #footer .sdrow {
+    margin-top: 30px;
+  }
+  #footer .sdrow a {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style_home.css.map */

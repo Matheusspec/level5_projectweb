@@ -2,17 +2,17 @@
 @import './reset';
 @import './global';
 
+
 /*header*/
 
 .header{
     @include flexdiplay(center,row);
-    background-color: #343a40f1;
+    background-color: #343a40cb;
     height: 80px;
 
     .brand {
-        width: 40px;
-        height: 40px;
-        background-color: red;
+        max-width: 85px;
+        max-height: 85px;   
         position: absolute;
         left: 3%;
     }
@@ -177,6 +177,8 @@
     }
 }
 
+/*Happy clients*/
+
 #happyclients{
     overflow: hidden;
     height: 420px ;
@@ -197,7 +199,7 @@
         background-color: rgba(0, 0, 0, 0.801);
     }
     #mcarousel{
-        height: 330px;
+        height: 430px;
         
         h1 {
             @include fontT(40px, $fontlora);
@@ -238,6 +240,162 @@
 
     }
 }
+
+/* where are we*/
+
+#where{
+
+    #map {
+        height: 420px;
+        overflow: hidden;
+        max-height: 420px;
+        max-width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .colmap{
+        padding: 0;
+    }
+    
+    .mapaside {
+        overflow: hidden;
+        background-color: $backcolor3;
+        box-sizing: border-box;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+        margin: 0;
+        @include flexdiplay(center,column);
+
+        .map-text{
+            font-size: 14px;
+            margin-left: 11px;
+            line-height: 45px;
+            width: 400px;
+            max-width: 400px;
+
+            p {
+                display: inline-block;
+
+            }
+            
+            i {
+                line-height: 33px;
+            }
+
+            &:hover i {
+                background: $primarycolor;
+                color: #fff;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: #000;
+    position: relative;
+    .toup{
+        position: absolute;
+        top: -20px;
+        right: 35px;
+
+        background-color: #0077ff;
+        color: #fff;
+
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+
+        font-size: 35px;
+        text-align: center;
+
+        border-radius: 50%;
+        transition: all .4s;
+
+        &:hover{
+            transform: translatey(-10px);
+            color: #000;
+        }
+    }
+     .firstrow {
+         @include flexdiplay(space-around, row);
+         .mediaicon{
+             height: 100px;
+             padding-top: 20px;
+             justify-content: space-around;
+             
+
+             h1{
+                 @include fontT(20px,$fontlora);
+             }
+             .face{
+                 color: #fff;
+                 background-color: #336296;
+                }
+                .link{
+                    color: #fff;
+                    background-color: #127CB6;
+                }
+                .you{
+                    color: #fff;
+                    background-color: #E64236;
+                }
+                .inst{
+                    color: #fff;
+                    background-color:  #f09433;
+                    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+                }
+        
+                i{
+                    line-height: 33px;
+                    &:hover{
+                    background-color: $primarycolor;
+                    color: #fff;
+                    }
+                }
+
+         }
+         .form{
+             padding-left: 30px;
+             @include flexdiplay(center,column);
+             input{
+                 border: none;
+                 border-bottom: 3px solid #fff;
+                 background-color: transparent;
+                 text-align: center;
+                 outline: none;
+                 color: #fff;
+                 width: 250px;
+                 max-width: 250px;
+                 margin-bottom: 20px;
+                 transition: .8s;
+                 &:focus{
+                     border-bottom: 3px solid $primarycolor;
+                 }
+             }
+
+             button{
+                 background: $primarycolor;
+             }
+             
+             h1{
+                 @include fontT(20px,$fontlora);
+             }
+         }
+     }
+     .sdrow{
+         @extend .firstrow;
+         a{
+             text-decoration: none;
+             color: #fff;
+             @include fontN(20px);
+         }
+     }
+}
+
+@import './layout.scss';
 
 
 
