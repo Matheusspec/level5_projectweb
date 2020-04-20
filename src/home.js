@@ -1,3 +1,4 @@
+// GOOGLE MAPS
 var map;
 function initMap() {
     
@@ -102,3 +103,27 @@ function initMap() {
         infowindow.open(map, marker);
     });
 }
+
+//MENU BUTTOM
+
+var menu = document.querySelector('.headmenu');
+var pmenu = document.querySelector('.nav');
+var liel = document.querySelector('.nav-links');
+let menuopen = false;
+menu.addEventListener('click', () => {
+  if(!menuopen){
+    pmenu.style.transform = 'translateY(0px)';
+    pmenu.style.opacity = '1';
+    pmenu.style.visibility = 'visible';
+    menu.classList.add('open');
+    menuopen = true;
+  }
+  else{
+    pmenu.style.transform = 'translateY(-400px)';
+    pmenu.style.opacity = '0';
+    pmenu.style.visibility = 'hidden';
+    menu.classList.remove('open');
+    menuopen = false;
+  }
+    
+})

@@ -2,6 +2,54 @@ html,body{
     scroll-behavior: smooth;
 
 }
+.headmenu{
+    display: none;
+    position: absolute;
+    right: 15px;
+    transition: all .5s ease-in-out;
+    .menu {
+        background-color: #fff;
+        height: 4px;
+        width: 48px;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px $primarycolor;
+        transition: all .5s ease-in-out;
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px $primarycolor;    
+            left: 0;    
+            transition: all .5s ease-in-out;
+        }
+        &::before{
+            transform: translateY(-16px);
+        }
+        &::after{
+            transform: translateY(16px);
+        }
+    }
+
+    &.open{
+        .menu{
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+            &::before{
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+            &::after{
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+    
+    }
+}
+
+
 
 .default-head{
     .title{

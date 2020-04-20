@@ -11,6 +11,49 @@ html, body {
   scroll-behavior: smooth;
 }
 
+.headmenu {
+  display: none;
+  position: absolute;
+  right: 15px;
+  transition: all .5s ease-in-out;
+}
+.headmenu .menu {
+  background-color: #fff;
+  height: 4px;
+  width: 48px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #0077ff;
+  transition: all .5s ease-in-out;
+}
+.headmenu .menu::before, .headmenu .menu::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #0077ff;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+.headmenu .menu::before {
+  transform: translateY(-16px);
+}
+.headmenu .menu::after {
+  transform: translateY(16px);
+}
+.headmenu.open .menu {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.headmenu.open .menu::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.headmenu.open .menu::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
 .default-head .title {
   font-size: 45px;
   font-family: "Lora", "Times New Roman", serif;
@@ -423,7 +466,30 @@ html, body {
   font-family: "Rubik", arial, sans-serif;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
+  #home .headmenu {
+    display: block;
+  }
+  #home .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
+    opacity: 0;
+    transform: translateY(-400px);
+    height: 271px;
+    top: 80px;
+    background-color: #343a40cb;
+    transition: all .9s ease-in-out;
+  }
+  #home .nav-links {
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
   #where .mapaside .map-text {
     margin-left: 65px;
   }
@@ -437,6 +503,11 @@ html, body {
   }
   #services P {
     font-size: 13px;
+  }
+
+  #products .row2 {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   #happyclients #happyclients .carousel-content {
@@ -493,10 +564,16 @@ html, body {
   #desc .desc-content p {
     font-size: 12px;
     margin: 0 10px;
+    text-align: justify;
   }
 
   #services .mcard, #services .mcard:last-child {
     border: none;
+  }
+
+  #products .row p {
+    font-size: 13px;
+    text-align: justify;
   }
 
   #happyclients #mcarousel h1 {
