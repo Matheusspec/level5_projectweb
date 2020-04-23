@@ -4,13 +4,14 @@
             display: block;
         }
         .nav{
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             position: absolute;
             right: 0px;
             opacity: 0;
-            transform: translateY(-400px);
+            transform: translateX(-400px);
             height: 271px;
             top: 80px;
             background-color: #343a40cb;
@@ -36,13 +37,16 @@
 }
 @media( max-width: 992px){
    #services{
+       .mcard {
         h1{
             font-size: 28px;
         }
+        
         P{
             font-size: 13px;
         }     
    }
+}
 
    #products{
        .row2{
@@ -131,10 +135,14 @@
 
     #services .mcard,#services .mcard:last-child{
         border: none;
+        padding-top: 15px;
     }
 
     #products{
         .row{
+            h1{
+                padding-top: 30px;
+            }
             p{
                 font-size: 13px;
                 text-align: justify;

@@ -1,0 +1,73 @@
+/*section intro*/
+
+#intro{ 
+    height: 100vh;
+    background-image: url('../../images/aboutus.jpg');
+    background-color: $backcolor;
+    background-position: center;
+    background-size: cover;
+
+    .header {
+        background-color: #343a409a;
+    }
+    .back{
+        height: calc(100% - 80px);
+        @include flexdiplay(center, column);
+        background-color: rgba(0, 0, 0, 0.774);
+        .intro-text{
+            padding: 0 20px;
+            padding-top: 40px;
+            p{
+                font-size: 18px;
+                text-align: justify;
+                font-family: $fontRub;
+            }
+        }
+    }
+    .default-head{
+        .title{
+            font-size: 55px;
+        }
+        .subtitle{
+            font-size: 22px;
+        }
+    }
+}
+
+#ourteam{
+    background-color: $backcolor;
+    height: 100vh;
+    
+    .carousel-guides {
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        background: transparent;
+        border: 2px solid #fff;
+        transition: all .8s;
+    }
+
+    .carousel-guides.active{
+        background: #fff;
+        opacity: 1;
+    }
+    .mcarousel{
+        width: 650px;
+        margin: 0 auto;
+        .mitem{
+            border-radius: 20px;
+            .defaulticon{
+                line-height: 33px;
+                &:hover{
+                    background-color: $primarycolor;
+                }
+            }
+        }
+        .mcaption{
+            background-color: rgba(0, 0, 0, 0.479);
+        }
+        .imgcarousel{
+            max-height: 450px;
+        }
+    }
+}

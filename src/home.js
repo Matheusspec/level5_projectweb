@@ -1,129 +1,71 @@
-// GOOGLE MAPS
-var map;
-function initMap() {
-    
-    var options = {
-        zoom: 20,
-        center: {lat: -16.701713, lng:  -49.271686},
-        disableDefaultUI: true,
-        styles: [
-            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#263c3f'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#6b9a76'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#38414e'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#212a37'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#9ca5b3'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#746855'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#1f2835'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#f3d19c'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#2f3948'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#17263c'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#515c6d'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#17263c'}]
-            }
-          ]
+import Axios from "axios";
+
+class animation {
+  constructor(){
+    this.menu = document.querySelector('.headmenu');
+    this.pmenu = document.querySelector('.nav');
+    this.liel = document.querySelector('.nav-links');    
+    this.click();
+  }
+
+    click(){
+      var menuopen = false;
+      this.menu.addEventListener('click', () => {
+        if(!menuopen){
+         this.pmenu.style.transform = 'translateX(0px)';
+         this.pmenu.style.opacity = '1';
+         this.pmenu.style.visibility = 'visible';
+         this.menu.classList.add('open');
+         menuopen = true;
+        }
+        else{
+          this.pmenu.style.transform = 'translateX(-400px)';
+          this.pmenu.style.opacity = '0';
+          this.pmenu.style.visibility = 'hidden';
+          this.menu.classList.remove('open');
+          menuopen = false;
+        }
+      })
     }
-
-    map = new google.maps.Map(document.getElementById('map'), options);
-
-    var marker  = new google.maps.Marker({
-        position:  {lat: -16.701713, lng:  -49.271686},
-        map,
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-        content: '<h5>We are here</h5>',
-    })
-
-    marker.addListener('click', () => {
-        infowindow.open(map, marker);
-    });
 }
 
-//MENU BUTTOM
+new animation();
 
-var menu = document.querySelector('.headmenu');
-var pmenu = document.querySelector('.nav');
-var liel = document.querySelector('.nav-links');
-let menuopen = false;
-menu.addEventListener('click', () => {
-  if(!menuopen){
-    pmenu.style.transform = 'translateY(0px)';
-    pmenu.style.opacity = '1';
-    pmenu.style.visibility = 'visible';
-    menu.classList.add('open');
-    menuopen = true;
+class marvel{
+  constructor(){
+    this.time = '1587571349';
+    this.publickey = '1c37cf42c8d877bdc0f8da81e13cbf31';
+    this.hash = '06c265786cef4484e53e2c1ccb691df3';
+    this.code = [1017316, 1009368, 1010335, 1017332, 1009165, 1011393,  1009299];
+    this.name = [];
+    this.img = [];
+    this.code.forEach( chara => this.getmembers(chara)); 
+
+
   }
-  else{
-    pmenu.style.transform = 'translateY(-400px)';
-    pmenu.style.opacity = '0';
-    pmenu.style.visibility = 'hidden';
-    menu.classList.remove('open');
-    menuopen = false;
-  }
+  
+  async getmembers(chara){
     
-})
+    try {
+      const response = await Axios.get('https://gateway.marvel.com/v1/public/characters/'+ chara +'?ts=1&apikey=1c37cf42c8d877bdc0f8da81e13cbf31&hash=28896a3aea05d982db8edc0fc748bade');
+      const result = response.data.data.results; 
+      this.name.push(result[0].name);
+      
+      this.img.push(result[0].thumbnail.path + '.jpg');
+      this.render();
+      
+      } catch (error) {
+          console.log(error);
+      }
+      
+    }
+    
+    render() {
+      for( let i = 0; i < 6; i++){
+        document.querySelector(".name"+ i + "").textContent = this.name[i];
+        document.querySelector(".img"+ i + "").src = this.img[i];
+      }
+    }
+}
+
+new marvel();

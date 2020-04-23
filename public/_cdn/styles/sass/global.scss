@@ -2,6 +2,61 @@ html,body{
     scroll-behavior: smooth;
 
 }
+
+.header{
+    @include flexdiplay(center,row);
+    background-color: #343a40cb;
+    height: 80px;
+
+    .brand {
+        max-width: 85px;
+        max-height: 85px;   
+        position: absolute;
+        left: 3%;
+    }
+}
+.nav {
+    &-links{
+        list-style: none;
+        width: 100%;
+        @include flexdiplay(center,row);
+
+        li {
+            margin: 0 30px;
+            position: relative;
+            .navlink{
+                @include fontT(20px,$fontMenu);
+                color: #fff;
+                text-decoration: none;    
+                font-weight: 500;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 0;
+                    height: 5px;
+                    position: absolute;
+                    background: $primarycolor;
+                    bottom: -5px;
+                    left: 0;
+                    transition: all .3s linear;
+                }
+            }
+            .active {
+                font-size: 25px;
+
+                &::before{
+                    @extend .navlink;
+                    width: 100%;
+                }
+            }
+
+            &:hover .navlink::before {
+                width: 100%;
+            }
+        }
+
+    }
+}
 .headmenu{
     display: none;
     position: absolute;
@@ -48,8 +103,6 @@ html,body{
     
     }
 }
-
-
 
 .default-head{
     .title{
