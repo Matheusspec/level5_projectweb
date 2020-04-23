@@ -71,3 +71,35 @@
         }
     }
 }
+
+#ourvalue{
+    background-color: $backcolor3;
+    .vl{
+        @include flexdiplay(center,column);
+        .vll{
+            @include flexdiplay(center,column);
+            border: 4px solid $primarycolor;
+            border-radius: 10px;
+            height: 330px;
+            max-width: 470px;
+            transition: all .4s linear;
+
+            h1{
+                @include fontT(35px,$fontlora);
+            }
+            p{
+                @include fontN();
+                transition: all .4s ;
+            }
+
+            &:hover p, &:hover h1 {
+                color: #000;
+            }
+            &:hover{
+                background-color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+}
+
