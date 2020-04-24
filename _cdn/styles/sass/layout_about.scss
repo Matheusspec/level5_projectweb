@@ -41,7 +41,7 @@
         .intro-text {
             padding: 10px 0 0;
             p{
-                font-size: 11px;
+                font-size: 13px;
             }
         }
     }
@@ -88,6 +88,9 @@
         padding-bottom: 30px;
         .mcarousel{
             width: 100%;
+            .carousel-caption{
+                width: auto;
+            }
         }
     }
     

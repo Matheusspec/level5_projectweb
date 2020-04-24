@@ -397,7 +397,7 @@ html, body {
     padding: 10px 0 0;
   }
   #intro .back .intro-text p {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   #intro .default-head .title {
@@ -436,6 +436,9 @@ html, body {
   }
   #ourteam .mcarousel {
     width: 100%;
+  }
+  #ourteam .mcarousel .carousel-caption {
+    width: auto;
   }
 
   #ourvalue .vl .vll {
