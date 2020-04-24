@@ -340,6 +340,7 @@ html, body {
   height: 330px;
   max-width: 470px;
   transition: all .4s linear;
+  padding: 0 10px;
 }
 #ourvalue .vl .vll h1 {
   font-size: 35px;

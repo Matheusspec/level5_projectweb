@@ -83,6 +83,7 @@
             height: 330px;
             max-width: 470px;
             transition: all .4s linear;
+            padding: 0 10px;
 
             h1{
                 @include fontT(35px,$fontlora);
