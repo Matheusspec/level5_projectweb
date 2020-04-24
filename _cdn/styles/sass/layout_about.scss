@@ -25,4 +25,88 @@
             }
         }
     }
+
+    #ourteam {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    #ourvalue .vl .vll{
+        margin-bottom: 30px;
+    }
+
 }
+
+@media( max-width: 767px){    
+    #intro .back {
+        .intro-text {
+            padding: 10px 0 0;
+            p{
+                font-size: 11px;
+            }
+        }
+    }
+
+    #intro .default-head .title{
+        font-size: 50px;
+    }
+
+    #ourteam {
+        .mcarousel{
+            width: 100%;
+            .carousel-caption{
+                width: 75%;
+            }
+        }
+    }
+    
+    #footer {
+
+        .firstrow .mediaicon{
+            margin: 30px 0;
+        }
+
+        .sdrow{
+            margin-top: 30px;
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media(max-height: 500px){
+    #intro .back .intro-text p{
+        font-size: 13px;
+    }
+
+    #intro .default-head .title{
+        font-size: 50px;
+    }
+
+    #ourteam {
+        height: auto;
+        padding-bottom: 30px;
+        .mcarousel{
+            width: 100%;
+        }
+    }
+    
+    #ourvalue .vl .vll{
+        margin-bottom: 30px;
+    }
+
+    #footer {
+
+        .firstrow .mediaicon{
+            margin: 30px 0;
+        }
+
+        .sdrow{
+            margin-top: 30px;
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
