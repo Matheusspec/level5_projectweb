@@ -7,213 +7,6 @@
   box-sizing: border-box;
 }
 
-/*header*/
-/*home*/
-#home {
-  background-image: url("../../images/bg.jpg");
-  background-color: #343a40;
-  background-position: center;
-  background-size: cover;
-  height: calc( 100vh);
-  text-align: center;
-}
-#home .back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.76);
-}
-#home .texti {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-}
-#home .texti h1 {
-  font-size: 50px;
-  font-family: "Lora", "Times New Roman", serif;
-  text-transform: uppercase;
-}
-#home .texti p {
-  text-align: center;
-  padding: 0 190px;
-  font-size: 17px;
-}
-
-/*desc*/
-#desc {
-  background-color: #d6d6d6;
-}
-#desc .desc-content {
-  border-radius: 10px;
-}
-#desc .desc-content p {
-  font-size: 16px;
-  font-family: "Rubik", arial, sans-serif;
-  margin: 0 100px;
-}
-#desc .desc-content .mbtn {
-  margin: 20px 0;
-}
-
-/*services*/
-#services {
-  background: #343a40;
-}
-#services .mcard {
-  background-color: #343a40;
-  border-left: 2px solid #fff;
-}
-#services .mcard h1 {
-  font-size: 40px;
-  font-family: "Lora", "Times New Roman", serif;
-  transition: 0.4s ease;
-}
-#services .mcard p {
-  color: #adadad;
-  font-size: 15px;
-  font-family: "Rubik", arial, sans-serif;
-  transition: 0.4s ease;
-}
-#services .mcard i {
-  font-size: 60px;
-  transition: 0.4s ease;
-}
-#services .mcard:last-child {
-  border-right: 2px solid #fff;
-}
-#services .mcardg:hover i, #services .mcardg:hover h1 {
-  color: #e71d1d;
-}
-#services .mcards:hover i, #services .mcards:hover h1 {
-  color: #f52092;
-}
-#services .mcardm:hover i, #services .mcardm:hover h1 {
-  color: #52cfee;
-}
-#services .mcard:hover i {
-  transform: translateY(-10px);
-}
-#services .mcard:hover p {
-  color: #fff;
-}
-
-/*products*/
-#products {
-  background-color: #d6d6d6;
-}
-#products .product-desc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#products .product-desc h1 {
-  font-size: 30px;
-  font-family: "Lora", "Times New Roman", serif;
-  text-transform: uppercase;
-}
-#products .product-desc p {
-  line-height: 25px;
-  font-size: 15px;
-  font-family: "Rubik", arial, sans-serif;
-}
-
-/*Happy clients*/
-#happyclients {
-  overflow: hidden;
-  height: 420px;
-  background-image: url("../../images/cytonn-photography-n95VMLxqM2I-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-}
-#happyclients .carousel-guides {
-  border-radius: 50%;
-  height: 12px;
-  width: 12px;
-  background: transparent;
-  border: 2px solid #fff;
-  transition: all .8s;
-}
-#happyclients .cont {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.801);
-}
-#happyclients #mcarousel {
-  height: 430px;
-}
-#happyclients #mcarousel h1 {
-  font-size: 40px;
-  font-family: "Lora", "Times New Roman", serif;
-  text-transform: uppercase;
-}
-#happyclients #mcarousel .indi {
-  top: 320px;
-}
-#happyclients #mcarousel .indi .active {
-  background: #fff;
-  opacity: 1;
-}
-#happyclients .carousel-item.active {
-  transition: transform .9s linear;
-}
-#happyclients .carousel-content {
-  padding: 0 200px;
-  text-align: center;
-  word-wrap: break-word;
-}
-#happyclients .carousel-content i {
-  font-size: 32px;
-}
-#happyclients .carousel-content p {
-  font-size: 15px;
-  font-family: "Rubik", arial, sans-serif;
-}
-#happyclients .carousel-content .client {
-  font-size: 15px;
-  font-family: "Rubik", arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-/* where are we*/
-#price .mm {
-  margin: 0;
-  max-width: 315px;
-}
-#price .mcard {
-  background-color: #343a40;
-  min-height: 10;
-  border-radius: 10px;
-  min-height: 345px;
-  margin: 0;
-}
-#price .mcard h3 {
-  font-size: 20px;
-  font-family: "Lora", "Times New Roman", serif;
-  text-transform: uppercase;
-}
-#price .mcard h1 {
-  font-size: 35px;
-  font-family: "Rubik", arial, sans-serif;
-  text-transform: uppercase;
-}
-#price .mcard span {
-  position: absolute;
-  top: 85px;
-  right: 0;
-  left: 0;
-  color: rgba(255, 255, 255, 0.692);
-}
-#price .mcard li {
-  list-style: none;
-  padding-top: 10px;
-  font-size: 14px;
-}
-
 html, body {
   scroll-behavior: smooth;
 }
@@ -457,11 +250,93 @@ html, body {
   font-family: "Rubik", arial, sans-serif;
 }
 
+#getin {
+  background: #d6d6d6;
+  height: 100vh;
+  background-image: url("../../images/getin.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+#getin .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#getin .form .mbtn {
+  animation: none;
+  transition: .4s;
+}
+#getin .form .inp {
+  width: 50%;
+  outline: none;
+  border: none;
+  color: #646464;
+  border-bottom: 3px solid #000;
+  background: transparent;
+  resize: none;
+  padding: 10px 0 0 10px;
+  margin: 10px 0;
+  transition: all .5s linear;
+  font-size: 15px;
+  font-family: "Lora", "Times New Roman", serif;
+}
+#getin .form .inp:focus {
+  border-bottom: 3px solid #0077ff;
+}
+#getin .form .inp::placeholder {
+  text-transform: uppercase;
+}
+
+#where #map {
+  height: 420px;
+  overflow: hidden;
+  max-height: 420px;
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#where .colmap {
+  padding: 0;
+}
+#where .mapaside {
+  overflow: hidden;
+  background-color: #343a40;
+  box-sizing: border-box;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#where .mapaside .map-text {
+  font-size: 14px;
+  margin-left: 11px;
+  line-height: 45px;
+  width: 400px;
+  max-width: 400px;
+}
+#where .mapaside .map-text p {
+  display: inline-block;
+}
+#where .mapaside .map-text i {
+  line-height: 33px;
+}
+#where .mapaside .map-text:hover i {
+  background: #0077ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 @media (max-width: 1024px) {
-  #home .headmenu {
+  header .headmenu {
     display: block;
   }
-  #home .nav {
+  header .nav {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -475,93 +350,55 @@ html, body {
     background-color: #343a40cb;
     transition: all .9s ease-in-out;
   }
-  #home .nav-links {
+  header .nav-links {
     height: 100%;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
+
+  #where .mapaside .map-text {
+    margin-left: 65px;
+  }
+  #where .mapaside .map-text p {
+    font-size: 12px;
+  }
 }
 @media (max-width: 992px) {
-  #services .mcard h1 {
-    font-size: 28px;
+  #getin .title {
+    font-size: 35px;
   }
-  #services .mcard P {
-    font-size: 13px;
-  }
-
-  #products .row2 {
-    display: flex;
-    flex-direction: column-reverse;
+  #getin .form .inp {
+    width: 100%;
   }
 
-  #happyclients #happyclients .carousel-content {
-    padding: 0 100px;
+  #where #map {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
-  #happyclients #mcarousel .indi {
-    top: 370px;
+  #where .mapaside {
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 }
-@media (max-width: 770px) {
-  #home .texti p {
-    padding: 0 100px;
+@media (max-width: 768px) {
+  #getin .mcont {
+    background-color: rgba(0, 0, 0, 0.479);
+    max-width: 100%;
+    height: calc( 100vh - 80px );
   }
-
-  #desc .desc-content p {
-    padding: 0;
+  #getin .title {
+    color: #fff;
   }
-
-  #services .mcard h1 {
-    font-size: 28px;
+  #getin .form .inp {
+    width: 100%;
+    color: #fff;
+    border-bottom-color: #fff;
   }
-  #services .mcard p {
-    font-size: 13px;
-  }
-
-  #happyclients .carousel-content {
-    padding: 0 70px;
-  }
-}
-@media (max-width: 767px) {
-  #home .texti h1 {
-    font-size: 37px;
-  }
-  #home .texti p {
-    padding: 0 10px;
-    font-size: 12px;
-  }
-
-  .default-head .title {
-    font-size: 33px;
-  }
-
-  #desc .desc-content p {
-    font-size: 12px;
-    margin: 0 10px;
-    text-align: justify;
-  }
-
-  #services .mcard, #services .mcard:last-child {
-    border: none;
-    padding-top: 15px;
-  }
-
-  #products .row h1 {
-    padding-top: 30px;
-  }
-  #products .row p {
-    font-size: 13px;
-    text-align: justify;
-  }
-
-  #happyclients #mcarousel h1 {
-    font-size: 33px;
-  }
-  #happyclients .carousel-content {
-    padding: 0 10px;
-  }
-  #happyclients .carousel-content p {
-    font-size: 12px;
+  #getin .form .inp::placeholder {
+    color: #fff;
   }
 
   #where #map {
@@ -582,4 +419,4 @@ html, body {
   }
 }
 
-/*# sourceMappingURL=style_home.css.map */
+/*# sourceMappingURL=style_contact.css.map */
