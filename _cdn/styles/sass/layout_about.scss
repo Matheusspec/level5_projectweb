@@ -61,9 +61,14 @@
     
     #footer {
 
-        .firstrow .mediaicon{
-            margin: 30px 0;
-        }
+        .firstrow{
+            .form{
+                padding-left: 0;
+            }
+            .mediaicon{        
+                margin: 30px 0;
+            }
+        } 
 
         .sdrow{
             margin-top: 30px;

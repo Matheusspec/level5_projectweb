@@ -408,6 +408,9 @@ html, body {
     border-radius: 0;
   }
 
+  #footer .firstrow .form, #footer .sdrow .form {
+    padding-left: 0;
+  }
   #footer .firstrow .mediaicon, #footer .sdrow .mediaicon {
     margin: 30px 0;
   }
