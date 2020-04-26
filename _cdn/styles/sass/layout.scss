@@ -162,3 +162,9 @@
         }
     }
 }
+
+@media( max-height: 500px){
+    #home .row{
+        margin-top: -75px;
+    }
+}

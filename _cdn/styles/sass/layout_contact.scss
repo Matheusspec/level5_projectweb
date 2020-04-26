@@ -107,4 +107,27 @@
         }
     }
 }
- 
+@media( max-height:500px){
+    #getin{
+        height: 429px;
+        .mcont{
+            height: calc( 429px - 80px);
+            .title{
+                padding: 0;
+            }
+            .mbtn{
+                margin-top: 0 !important;
+            }
+        }
+
+        .form{
+            .em{
+                @include flexdiplay(center,row);
+                .inp1{
+                    margin-right: 5px;
+                }
+            }
+
+        }
+    }
+}

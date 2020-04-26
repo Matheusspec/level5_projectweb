@@ -581,5 +581,10 @@ html, body {
     font-size: 16px;
   }
 }
+@media (max-height: 500px) {
+  #home .row {
+    margin-top: -75px;
+  }
+}
 
 /*# sourceMappingURL=style_home.css.map */

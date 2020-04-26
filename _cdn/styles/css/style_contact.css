@@ -418,5 +418,28 @@ html, body {
     font-size: 16px;
   }
 }
+@media (max-height: 500px) {
+  #getin {
+    height: 429px;
+  }
+  #getin .mcont {
+    height: calc( 429px - 80px);
+  }
+  #getin .mcont .title {
+    padding: 0;
+  }
+  #getin .mcont .mbtn {
+    margin-top: 0 !important;
+  }
+  #getin .form .em {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #getin .form .em .inp1 {
+    margin-right: 5px;
+  }
+}
 
 /*# sourceMappingURL=style_contact.css.map */
