@@ -435,7 +435,7 @@ html, body {
     height: 429px;
   }
   #getin .mcont {
-    height: calc( 429px - 80px);
+    height: calc( 429px - 80px) !important;
   }
   #getin .mcont .title {
     padding: 0;

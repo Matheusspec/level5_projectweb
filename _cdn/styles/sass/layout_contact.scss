@@ -123,7 +123,7 @@
     #getin{
         height: 429px;
         .mcont{
-            height: calc( 429px - 80px);
+            height: calc( 429px - 80px) !important;
             .title{
                 padding: 0;
             }
