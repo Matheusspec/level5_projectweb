@@ -69,7 +69,7 @@
         .mcont{
             background-color: rgba(0, 0, 0, 0.479);
             max-width: 100%;
-            height: calc( 100vh - 80px );
+            height: calc( 100vh - 80px ) !important;
         }
         .title{
             color: #fff;
