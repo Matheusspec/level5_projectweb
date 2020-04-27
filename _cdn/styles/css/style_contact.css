@@ -411,12 +411,6 @@ html, body {
   #footer .firstrow .form, #footer .sdrow .form {
     padding-left: 0;
   }
-  #footer .firstrow .form .em, #footer .sdrow .form .em {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   #footer .firstrow .form .em .inp1, #footer .sdrow .form .em .inp1 {
     margin-right: 5px;
   }
