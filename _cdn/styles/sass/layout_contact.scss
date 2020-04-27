@@ -96,8 +96,15 @@
     #footer {
 
         .firstrow{
+            
             .form{
                 padding-left: 0;
+                .em{
+                    @include flexdiplay(center,column);
+                    .inp1{
+                        margin-right: 5px;
+                    }
+                }
             }
             .mediaicon{        
                 margin: 30px 0;
@@ -112,7 +119,7 @@
         }
     }
 }
-@media( max-height:500px){
+@media( max-height:500px) {
     #getin{
         height: 429px;
         .mcont{
