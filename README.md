@@ -17,4 +17,4 @@
             <li>Alibaba Cloud</li>
         </ul>
         <h3>Link:</h3>
-        <a href="https://www.telesmatheus.win">www.telesmatheus.win</a>
+        <a target="blank" href="https://www.telesmatheus.win">www.telesmatheus.win</a>
