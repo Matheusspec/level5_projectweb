@@ -10,6 +10,10 @@
             <li>JavaScript</li>
             <li>ES6</li>
             <li>VisualStudioCode</li>
+            <li>bootstrap 4</li>
+            <li>fontawesome</li>
+            <li>babel</li>
+            <li>webpack</li>
         </ul>
         <h4>Domain and host:</h4>
         <ul>
