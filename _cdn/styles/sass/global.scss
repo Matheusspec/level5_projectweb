@@ -1,250 +1,257 @@
-html,body{
-    scroll-behavior: smooth;
-
+html,
+body {
+  scroll-behavior: smooth;
 }
 
-.header{
-    @include flexdiplay(center,row);
-    background-color: #343a40cb;
-    height: 80px;
+.header {
+  @include flexdiplay(center, row);
+  background-color: #343a40cb;
+  height: 80px;
 
-    .brand {
-        max-width: 85px;
-        max-height: 85px;   
-        position: absolute;
-        left: 3%;
-    }
+  .brand {
+    max-width: 85px;
+    max-height: 85px;
+    position: absolute;
+    left: 3%;
+  }
 }
 .nav {
-    &-links{
-        list-style: none;
+  &-links {
+    list-style: none;
+    width: 100%;
+    @include flexdiplay(center, row);
+
+    li {
+      margin: 0 30px;
+      position: relative;
+      .navlink {
+        @include fontT(20px, $fontMenu);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        &::before {
+          content: "";
+          width: 0;
+          height: 5px;
+          position: absolute;
+          background: $primarycolor;
+          bottom: -5px;
+          left: 0;
+          transition: all 0.3s linear;
+        }
+      }
+      .active {
+        font-size: 25px;
+
+        &::before {
+          @extend .navlink;
+          width: 100%;
+        }
+      }
+
+      &:hover .navlink::before {
         width: 100%;
-        @include flexdiplay(center,row);
-
-        li {
-            margin: 0 30px;
-            position: relative;
-            .navlink{
-                @include fontT(20px,$fontMenu);
-                color: #fff;
-                text-decoration: none;    
-                font-weight: 500;
-                position: relative;
-                &::before{
-                    content: '';
-                    width: 0;
-                    height: 5px;
-                    position: absolute;
-                    background: $primarycolor;
-                    bottom: -5px;
-                    left: 0;
-                    transition: all .3s linear;
-                }
-            }
-            .active {
-                font-size: 25px;
-
-                &::before{
-                    @extend .navlink;
-                    width: 100%;
-                }
-            }
-
-            &:hover .navlink::before {
-                width: 100%;
-            }
-        }
-
+      }
     }
+  }
 }
-.headmenu{
-    display: none;
-    position: absolute;
-    right: 15px;
-    transition: all .5s ease-in-out;
+.headmenu {
+  display: none;
+  position: absolute;
+  right: 15px;
+  transition: all 0.5s ease-in-out;
+  .menu {
+    background-color: #fff;
+    height: 4px;
+    width: 48px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px $primarycolor;
+    transition: all 0.5s ease-in-out;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 1px 5px $primarycolor;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+    }
+    &::before {
+      transform: translateY(-16px);
+    }
+    &::after {
+      transform: translateY(16px);
+    }
+  }
+
+  &.open {
     .menu {
-        background-color: #fff;
-        height: 4px;
-        width: 48px;
-        border-radius: 5px;
-        box-shadow: 0 1px 5px $primarycolor;
-        transition: all .5s ease-in-out;
-        &::before,&::after{
-            content: '';
-            position: absolute;
-            width: inherit;
-            height: inherit;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px $primarycolor;    
-            left: 0;    
-            transition: all .5s ease-in-out;
-        }
-        &::before{
-            transform: translateY(-16px);
-        }
-        &::after{
-            transform: translateY(16px);
-        }
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+      &::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
     }
-
-    &.open{
-        .menu{
-            transform: translateX(-50px);
-            background: transparent;
-            box-shadow: none;
-            &::before{
-                transform: rotate(45deg) translate(35px, -35px);
-            }
-            &::after{
-                transform: rotate(-45deg) translate(35px, 35px);
-            }
-        }
-    
-    }
+  }
 }
 
-.default-head{
-    .title{
-        @include fontT(45px,$fontlora);
-        padding: 30px 0 0;
-        margin: 0;
-    }
+.default-head {
+  .title {
+    @include fontT(45px, $fontlora);
+    padding: 30px 0 0;
+    margin: 0;
+  }
 
-    .subtitle{
-        color: #999;
-        font:{
-            family: $fontRub;
-            weight: 500;
-        }
+  .subtitle {
+    color: #999;
+    font: {
+      family: $fontRub;
+      weight: 500;
     }
+  }
 }
 
 .defaulticon {
-    margin-right: 5px;
-    font-size: 19px;
-    cursor: pointer;
-    background-color: #fff ;
-    color: $backcolor3;
-    line-height: 33px;
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    text-align: center;
-    transition: all .4s linear;
+  margin-right: 5px;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: #fff;
+  color: $backcolor3;
+  line-height: 33px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.4s linear;
 }
 
 .mbtn {
-    @include btnp;
-    border: none;
-    animation: spin .9s linear infinite;
-    height: 45px;
-    width: 130px;
-    color: #fff;
+  @include btnp;
+  border: none;
+  animation: spin 0.9s linear infinite;
+  height: 45px;
+  width: 130px;
+  color: #fff;
+  font-size: 16px;
 }
 
 @keyframes spin {
-    to { background: rgb(0, 94, 202); }
+  to {
+    background: rgb(0, 94, 202);
+  }
 }
 
 #footer {
-    background-color: #000;
-    position: relative;
-    .toup{
-        position: absolute;
-        top: -20px;
-        right: 35px;
+  background-color: #000;
+  position: relative;
+  .toup {
+    position: absolute;
+    top: -20px;
+    right: 35px;
 
-        background-color: #0077ff;
-        color: #fff;
+    background-color: #0077ff;
+    color: #fff;
 
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
 
-        font-size: 35px;
-        text-align: center;
+    font-size: 35px;
+    text-align: center;
 
-        border-radius: 50%;
-        transition: all .4s;
+    border-radius: 50%;
+    transition: all 0.4s;
 
-        &:hover{
-            transform: translatey(-10px);
-            color: #000;
-        }
+    &:hover {
+      transform: translatey(-10px);
+      color: #000;
     }
-     .firstrow {
-         @include flexdiplay(space-around, row);
-         .mediaicon{
-             height: 100px;
-             padding-top: 20px;
-             justify-content: space-around;
-             
+  }
+  .firstrow {
+    @include flexdiplay(space-around, row);
+    .mediaicon {
+      height: 100px;
+      padding-top: 20px;
+      justify-content: space-around;
 
-             h1{
-                 @include fontT(20px,$fontlora);
-             }
-             .face{
-                 color: #fff;
-                 background-color: #336296;
-                }
-                .link{
-                    color: #fff;
-                    background-color: #127CB6;
-                }
-                .you{
-                    color: #fff;
-                    background-color: #E64236;
-                }
-                .inst{
-                    color: #fff;
-                    background-color:  #f09433;
-                    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-                }
-        
-                i{
-                    line-height: 33px;
-                    &:hover{
-                    background-color: $primarycolor;
-                    color: #fff;
-                    }
-                }
+      h1 {
+        @include fontT(20px, $fontlora);
+      }
+      .face {
+        color: #fff;
+        background-color: #336296;
+      }
+      .link {
+        color: #fff;
+        background-color: #127cb6;
+      }
+      .you {
+        color: #fff;
+        background-color: #e64236;
+      }
+      .inst {
+        color: #fff;
+        background-color: #f09433;
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+      }
 
-         }
-         .form{
-             padding-left: 30px;
-             @include flexdiplay(center,column);
-             input{
-                 border: none;
-                 border-bottom: 3px solid #fff;
-                 background-color: transparent;
-                 text-align: center;
-                 outline: none;
-                 color: #fff;
-                 width: 250px;
-                 max-width: 250px;
-                 margin-bottom: 20px;
-                 transition: .8s;
-                 &:focus{
-                     border-bottom: 3px solid $primarycolor;
-                 }
-             }
+      i {
+        line-height: 33px;
+        &:hover {
+          background-color: $primarycolor;
+          color: #fff;
+        }
+      }
+    }
+    .form {
+      padding-left: 30px;
+      @include flexdiplay(center, column);
+      input {
+        border: none;
+        border-bottom: 3px solid #fff;
+        background-color: transparent;
+        text-align: center;
+        outline: none;
+        color: #fff;
+        width: 250px;
+        max-width: 250px;
+        margin-bottom: 20px;
+        transition: 0.8s;
+        &:focus {
+          border-bottom: 3px solid $primarycolor;
+        }
+      }
 
-             button{
-                 background: $primarycolor;
-             }
-             
-             h1{
-                 @include fontT(20px,$fontlora);
-             }
-         }
-     }
-     .sdrow{
-         @extend .firstrow;
-         a{
-             text-decoration: none;
-             color: #fff;
-             @include fontN(20px);
-         }
-     }
+      button {
+        background: $primarycolor;
+      }
+
+      h1 {
+        @include fontT(20px, $fontlora);
+      }
+    }
+  }
+  .sdrow {
+    @extend .firstrow;
+    a {
+      text-decoration: none;
+      color: #fff;
+      @include fontN(20px);
+    }
+  }
 }

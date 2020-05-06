@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -48,14 +49,14 @@ html, body {
   position: relative;
 }
 .nav-links li .navlink::before, .nav-links li .active::before {
-  content: '';
+  content: "";
   width: 0;
   height: 5px;
   position: absolute;
   background: #0077ff;
   bottom: -5px;
   left: 0;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 .nav-links li .active {
   font-size: 25px;
@@ -71,7 +72,7 @@ html, body {
   display: none;
   position: absolute;
   right: 15px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .headmenu .menu {
   background-color: #fff;
@@ -79,10 +80,10 @@ html, body {
   width: 48px;
   border-radius: 5px;
   box-shadow: 0 1px 5px #0077ff;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .headmenu .menu::before, .headmenu .menu::after {
-  content: '';
+  content: "";
   position: absolute;
   width: inherit;
   height: inherit;
@@ -90,7 +91,7 @@ html, body {
   border-radius: 5px;
   box-shadow: 0 1px 5px #0077ff;
   left: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .headmenu .menu::before {
   transform: translateY(-16px);
@@ -134,16 +135,17 @@ html, body {
   height: 33px;
   border-radius: 50%;
   text-align: center;
-  transition: all .4s linear;
+  transition: all 0.4s linear;
 }
 
 .mbtn {
   border-radius: 25px;
   border: none;
-  animation: spin .9s linear infinite;
+  animation: spin 0.9s linear infinite;
   height: 45px;
   width: 130px;
   color: #fff;
+  font-size: 16px;
 }
 
 @keyframes spin {
@@ -167,7 +169,7 @@ html, body {
   font-size: 35px;
   text-align: center;
   border-radius: 50%;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 #footer .toup:hover {
   transform: translatey(-10px);
@@ -195,11 +197,11 @@ html, body {
 }
 #footer .firstrow .mediaicon .link, #footer .sdrow .mediaicon .link {
   color: #fff;
-  background-color: #127CB6;
+  background-color: #127cb6;
 }
 #footer .firstrow .mediaicon .you, #footer .sdrow .mediaicon .you {
   color: #fff;
-  background-color: #E64236;
+  background-color: #e64236;
 }
 #footer .firstrow .mediaicon .inst, #footer .sdrow .mediaicon .inst {
   color: #fff;
@@ -230,7 +232,7 @@ html, body {
   width: 250px;
   max-width: 250px;
   margin-bottom: 20px;
-  transition: .8s;
+  transition: 0.8s;
 }
 #footer .firstrow .form input:focus, #footer .sdrow .form input:focus {
   border-bottom: 3px solid #0077ff;
@@ -266,7 +268,8 @@ html, body {
 }
 #getin .form .mbtn {
   animation: none;
-  transition: .4s;
+  transition: 0.4s;
+  font-size: 16px;
 }
 #getin .form .inp {
   width: 50%;
@@ -278,7 +281,7 @@ html, body {
   resize: none;
   padding: 10px 0 0 10px;
   margin: 10px 0;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   font-size: 15px;
   font-family: "Lora", "Times New Roman", serif;
 }
